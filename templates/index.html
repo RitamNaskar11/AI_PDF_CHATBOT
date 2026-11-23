@@ -7,23 +7,141 @@
     <title>AI PDF Chatbot</title>
     <link rel="stylesheet" href={{url_for('static', filename='style.css' )}}>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href={{url_for('static', filename='home.css' )}}>
 </head>
 
 <body>
 
-    <!-- <div class="container">
+    <div class="page">
 
-    </div> -->
+        <!-- NAVBAR -->
+        <header class="navbar">
 
-    <div class="container background">
-        <h1>AI PDF Chatbot</h1>
-        <p>Your intelligent PDF assistant</p>
-        <button class="btn">Get Started</button>
-        <div class="green-glow"></div>
-        <div class="wave wave1"></div>
-        <div class="wave wave2"></div>
-        <div class="wave wave3"></div>
+            <a href="{{ url_for('home') }}" class="logo">
+                <span>PDF AI<br>Chatbot</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="{{ url_for('home') }}" class="active">Home</a>
+                <a href="#features">Features</a>
+                <a href="#about">About</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+
+            <div class="nav-buttons">
+                <a href="{{ url_for('login') }}" class="login-btn">
+                    Login
+                </a>
+
+                <a href="{{ url_for('signup') }}" class="signup-btn">
+                    Get Started
+                </a>
+            </div>
+
+        </header>
+
+        <!-- HERO SECTION -->
+        <main class="hero">
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    YOUR SMART PDF ASSISTANT
+                </div>
+
+                <h1>AI PDF <span>Chatbot</span></h1>
+
+                <p class="hero-description">
+                    Chat with your PDFs, get instant answers,
+                    generate summaries and create quizzes
+                    with the power of AI.
+                </p>
+
+                <ul class="feature-list">
+                    <li>Ask Questions Naturally</li>
+                    <li>Get Summaries & Key Points</li>
+                    <li>Generate MCQ Quizzes</li>
+                    <li>Save Chat History</li>
+                </ul>
+
+                <div class="hero-buttons">
+
+                    <a href="{{ url_for('signup') }}" class="primary-btn">
+                        Get Started
+                    </a>
+
+                    <a href="#features" class="secondary-btn">
+                        Explore Features
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- CSS ROBOT & PDF ILLUSTRATION -->
+            <div class="hero-visual" aria-hidden="true">
+
+                <div class="visual-glow"></div>
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+
+                <div class="pdf-document">
+                    <div class="pdf-lines"></div>
+                    <div class="pdf-badge">PDF</div>
+                    <div class="pdf-lines bottom"></div>
+                </div>
+
+                <div class="robot">
+                    <div class="antenna"></div>
+
+                    <div class="robot-head">
+                        <div class="robot-face">
+                            <div class="eyes">
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="mouth"></div>
+                        </div>
+                    </div>
+
+                    <div class="robot-body">
+                        <div class="robot-core"></div>
+                    </div>
+                </div>
+
+                <div class="platform"></div>
+
+            </div>
+
+        </main>
+
+        <!-- FEATURE CARDS -->
+        <section class="features" id="features">
+
+            <div class="feature-card">
+                <h3>PDF Upload</h3>
+                <p>Upload and explore your documents.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>AI Chat</h3>
+                <p>Ask questions about PDF content.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Summarize</h3>
+                <p>Get important information quickly.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Quiz Generator</h3>
+                <p>Practice with PDF-based quizzes.</p>
+            </div>
+
+        </section>
+
     </div>
+
 
 </body>
 

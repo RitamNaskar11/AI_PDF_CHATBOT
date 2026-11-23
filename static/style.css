@@ -318,6 +318,7 @@ body.auth-page .auth-background {
 .password-wrapper input {
     width: 100%;
     padding-right: 45px;
+    box-sizing: border-box;
 }
 
 .toggle-password {
@@ -327,9 +328,13 @@ body.auth-page .auth-background {
     transform: translateY(-50%);
     background: transparent;
     border: none;
-    color:#909090;
+    color: #ADFF2F;
     cursor: pointer;
     font-size: 17px;
+}
+
+.toggle-password i {
+    pointer-events: none;
 }
 
 /* MOBILE RESPONSIVE */
