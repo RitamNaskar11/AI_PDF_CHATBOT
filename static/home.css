@@ -33,11 +33,10 @@ body {
 /* NAVBAR */
 
 .navbar {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 30px;
-    padding: 18px 10px;
 }
 
 .logo {
@@ -54,11 +53,17 @@ body {
     font-size: 34px;
 }
 
-.nav-links,
-.nav-buttons {
+.nav-links{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
     display: flex;
     align-items: center;
-    gap: 35px;
+    gap: 40px;
+}
+.nav-buttons {
+ margin-left: auto;
 }
 
 .nav-links a {
@@ -83,7 +88,7 @@ body {
 
 .login-btn {
     color: white;
-    border: 1px solid #55705d;
+    /* border: 1px solid #55705d; */
 }
 
 .signup-btn {
@@ -286,96 +291,13 @@ body {
 }
 
 /* ROBOT */
-
-.robot {
+.robot-image {
     position: absolute;
-    width: 220px;
-    height: 320px;
-    right: 10%;
-    top: 17%;
-    z-index: 3;
-}
-
-.antenna {
-    position: absolute;
-    width: 6px;
-    height: 35px;
-    background: #b3fff0;
-    left: 50%;
-    top: -28px;
-    transform: rotate(18deg);
-}
-
-.antenna::after {
-    content: "";
-    position: absolute;
-    width: 17px;
-    height: 17px;
-    border-radius: 50%;
-    background: #aaff3c;
-    top: -10px;
-    left: -5px;
-    box-shadow: 0 0 15px #aaff3c;
-}
-
-.robot-head {
-    height: 165px;
-    border-radius: 45%;
-    background: linear-gradient(135deg, #fff, #789a99);
-    border: 8px solid #acc7bf;
-    padding: 17px;
-    box-shadow: 0 15px 40px #0008;
-}
-
-.robot-face {
-    background: #061719;
-    height: 100%;
-    border-radius: 42%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 18px;
-}
-
-.eyes {
-    display: flex;
-    gap: 40px;
-}
-
-.eyes span {
-    width: 30px;
-    height: 18px;
-    border-top: 5px solid #aaff9e;
-    border-radius: 50%;
-    box-shadow: 0 -5px 10px #46ff8544;
-}
-
-.mouth {
-    width: 29px;
-    height: 13px;
-    border-bottom: 5px solid #aaff9e;
-    border-radius: 50%;
-}
-
-.robot-body {
-    width: 160px;
-    height: 155px;
-    margin: -3px auto 0;
-    border-radius: 45% 45% 35% 35%;
-    border: 7px solid #a4c7be;
-    background: linear-gradient(135deg, #f4fff9, #718e89);
-    display: grid;
-    place-items: center;
-}
-
-.robot-core {
-    width: 55px;
-    height: 55px;
-    background: #aaff3c;
-    border: 8px solid #6cbd8c;
-    border-radius: 50%;
-    box-shadow: 0 0 25px #00ff77aa;
+    z-index: 5;
+    width: 500px;
+    /* max-width: 50%; */
+    left: 150px;
+    filter: drop-shadow(0 0 25px rgba(0, 255, 100, 0.35));
 }
 
 .floating-icon {
