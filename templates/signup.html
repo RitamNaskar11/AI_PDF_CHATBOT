@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup | AI PDF Chatbot</title>
+    <link rel="stylesheet" href="{{url_for ('static',filename='style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="auth-page">
+
+    <div class="auth-card">
+
+        <!-- <div class="auth-logo">✳</div> -->
+
+        <p class="auth-label">AI PDF CHATBOT</p>
+
+        <h1>Create <span>Account.</span></h1>
+
+        <p class="auth-subtitle">
+            Start your journey with intelligent documents.
+        </p>
+
+        <div class="auth-fields">
+
+            <div class="input-group">
+                <label for="name">Full Name</label>
+
+                <input type="text" id="name" placeholder="Enter your full name" autocomplete="name" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email Address</label>
+
+                <input type="email" id="email" placeholder="Enter your email" autocomplete="email" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" placeholder="Enter your password"
+                        autocomplete="current-password" required>
+                    <button type="button" id="togglePassword" class="toggle-password">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password</label>
+
+                <input type="password" id="confirm-password" placeholder="Confirm your password"
+                    autocomplete="new-password" required>
+            </div>
+
+            <button type="button" class="auth-button">
+                Create Account
+            </button>
+
+        </div>
+
+        <p class="auth-footer">
+            Already have an account?
+
+            <a href="{{ url_for('login') }}">
+                Login
+            </a>
+        </p>
+
+        <a href="{{ url_for('home') }}" class="back-link">
+            Back to Home
+        </a>
+
+    </div>
+
+    <div class="background auth-background">
+
+        <div class="green-glow"></div>
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+    </div>
+
+</body>
+
+</html>

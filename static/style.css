@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #020806;
+}
+
+.container.background {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Main Background */
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    background:
+        radial-gradient(ellipse at 85% 95%,
+            rgba(0, 255, 90, 0.22),
+            transparent 45%),
+
+        radial-gradient(ellipse at 5% 100%,
+            rgba(0, 255, 70, 0.18),
+            transparent 40%),
+
+        linear-gradient(135deg,
+            #020706,
+            #000c08 50%,
+            #010403);
+}
+
+/* Neon Green Glow */
+
+.green-glow {
+    position: absolute;
+
+    background: radial-gradient(circle,
+            rgba(0, 255, 80, 0.65) 0%,
+            rgba(0, 255, 80, 0.25) 35%,
+            transparent 70%);
+
+    filter: blur(80px);
+}
+
+/* Common Wave Styling */
+
+.wave {
+    position: absolute;
+    width: 250%;
+    height: 350px;
+
+    left: -20%;
+    bottom: -200px;
+
+    border-radius: 50%;
+
+    transform: rotate(-5deg);
+}
+
+/* First Green Wave */
+
+.wave1 {
+    background: linear-gradient(90deg, #0f4f29, #029332, #000502);
+
+    opacity: 0.65;
+
+    filter: blur(35px);
+}
+
+/* Second Green Wave */
+
+.wave2 {
+    bottom: -245px;
+
+    background: linear-gradient(90deg, #000000, #000000, #000000);
+
+    opacity: 0.5;
+
+    transform: rotate(7deg);
+
+    filter: blur(45px);
+}
+
+/* Third Dark Wave */
+
+.wave3 {
+    bottom: -280px;
+
+    background: linear-gradient(90deg, #000000, #05963c, #000000);
+
+    opacity: 0.8;
+
+    filter: blur(30px);
+}
+
+
+h1 {
+    color: #B7FF4B;
+    font-size: 48px;
+}
+
+p {
+    color: #aaa;
+    font-size: 18px;
+}
+
+.btn {
+    background-color: #B7FF4B;
+    color: black;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #92E636;
+}
+
+/* ==============================
+   LOGIN & SIGNUP PAGE
+============================== */
+
+body.auth-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0;
+    padding: 24px;
+    overflow-x: hidden;
+}
+
+/* LOGIN CARD */
+body.auth-page .auth-card {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 24px;
+    max-width: 480px;
+    border: 1px solid rgba(183, 255, 75, 0.25);
+    border-radius: 40px;
+    box-shadow:
+        0 0 70px rgba(0, 255, 100, 0.06);
+
+    text-align: center;
+    margin: auto;
+}
+
+body.auth-page .auth-background {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+
+
+/* HEADING */
+
+.auth-label {
+    color: #B7FF4B;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.auth-card h1 {
+    color: white;
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.auth-card h1 span {
+    color: #B7FF4B;
+}
+
+.auth-subtitle {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* INPUT FIELDS */
+
+.auth-fields {
+    text-align: left;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    color: #ddd;
+    margin-bottom: 9px;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+
+    background: #111a15;
+    border: 1px solid #304035;
+
+    color: white;
+    font-size: 14px;
+
+    border-radius: 10px;
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #B7FF4B;
+
+    box-shadow:
+        0 0 12px rgba(183, 255, 75, 0.12);
+}
+
+.input-group input::placeholder {
+    color: #657568;
+}
+
+/* LOGIN BUTTON */
+
+.auth-button {
+    width: 100%;
+    padding: 14px;
+
+    margin-top: 10px;
+
+    background: #B7FF4B;
+    color: #080808;
+
+    border: none;
+    border-radius: 33px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.auth-button:hover {
+    background: #CEFF89;
+
+    box-shadow:
+        0 0 22px rgba(183, 255, 75, 0.35);
+
+    transform: translateY(-2px);
+}
+
+/* FOOTER LINKS */
+
+.auth-footer {
+    margin-top: 25px;
+    color: #999;
+    font-size: 14px;
+}
+
+.auth-footer a {
+    color: #B7FF4B;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 25px;
+
+    color: #888;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.back-link:hover {
+    color: #B7FF4B;
+}
+
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 45px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color:#909090;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 480px) {
+    .auth-card {
+        padding: 28px 22px;
+    }
+
+    .auth-card h1 {
+        font-size: 28px;
+    }
+}
